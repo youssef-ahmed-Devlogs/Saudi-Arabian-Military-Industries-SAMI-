@@ -1,0 +1,362 @@
+.hero__section {
+  position: relative;
+
+  header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    .sidebar__btn {
+      width: 40px;
+      height: 25px;
+      border: none;
+      outline: none;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      direction: rtl;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $SAMI_WHITE;
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+
+        &:nth-child(2) {
+          width: 90%;
+        }
+      }
+
+      &:hover {
+        span:nth-child(2) {
+          width: 100%;
+          background-color: $SAMI_GREEN;
+        }
+      }
+
+      &.sidebar__btn-close {
+        transform: rotate(90deg);
+        position: absolute;
+        right: 25px;
+        top: 30px;
+      }
+
+      @media (max-width: 767px) {
+        width: 35px;
+        height: 20px;
+
+        span {
+          height: 2px;
+        }
+      }
+    }
+
+    .sidebar {
+      position: absolute;
+      left: -300%;
+      top: 0;
+      width: 600px;
+      height: 100vh;
+      color: $SAMI_WHITE;
+      background-color: $SAMI_BLACK;
+      padding: 30px;
+      transition: 0.5s ease-in-out;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      z-index: 1000;
+
+      @media (max-width: 767px) {
+        width: 90%;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: $SAMI_BLACK;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $SAMI_GREEN;
+      }
+
+      .sidebar__list {
+        margin-top: 90px;
+
+        .sidebar__link {
+          color: $SAMI_WHITE;
+          font-size: 32px;
+          transition: 0.3s ease-in-out;
+          line-height: 1.8;
+          display: flex;
+          align-items: center;
+          gap: 0 12px;
+          text-transform: capitalize;
+
+          i {
+            font-size: 14px;
+          }
+
+          &:hover {
+            color: $SAMI_GREEN;
+          }
+
+          @media (max-width: 767px) {
+            font-size: 25px;
+
+            i {
+              font-size: 12px;
+            }
+          }
+        }
+
+        &.sidebar__sublist {
+          margin-top: 0;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+
+          .sidebar__link {
+            font-size: 22px;
+            padding-left: 32px;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: $SAMI_WHITE;
+              height: 1.3px;
+              width: 20px;
+              transition: 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+              background-color: $SAMI_GREEN;
+            }
+
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .sidebar__important__links {
+        .head {
+          font-size: 23px;
+          @media (max-width: 767px) {
+            font-size: 16px;
+          }
+        }
+
+        .important__list {
+          .important__link {
+            color: $SAMI_WHITE;
+            transition: 0.3s ease-in-out;
+            text-transform: capitalize;
+            font-size: 16px;
+
+            &:hover {
+              color: $SAMI_GREEN;
+            }
+
+            @media (max-width: 767px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .search__form {
+        position: relative;
+
+        i {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+
+        input {
+          display: block;
+          background: none;
+          border: none;
+          outline: none;
+          width: 100%;
+          border-bottom: 1px solid $SAMI_WHITE;
+          padding: 10px;
+          padding-left: 30px;
+          color: $SAMI_WHITE;
+          font-size: 15px;
+
+          &::placeholder {
+            color: $SAMI_WHITE;
+          }
+
+          @media (max-width: 767px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .sidebar__social__icons {
+        .icon {
+          font-size: 20px;
+          transition: 0.3s ease-in-out;
+          color: $SAMI_WHITE;
+
+          &:hover {
+            color: $SAMI_GREEN;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .icon {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .change__lang {
+      height: 30px;
+      font-size: 16px;
+      color: $SAMI_WHITE;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: $SAMI_GREEN;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+        height: 20px;
+      }
+    }
+
+    .sami__logo,
+    .wds__logo {
+      img {
+        width: 140px;
+      }
+
+      @media (max-width: 767px) {
+        img {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .slide__content {
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .slide__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $SAMI_WHITE;
+
+      .slide__head {
+        font-size: 54px;
+        line-height: 50px;
+        font-weight: 700;
+        margin-bottom: 23px;
+        max-width: 825px;
+      }
+
+      .slide__desc {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        max-width: 671px;
+      }
+
+      @media (max-width: 767px) {
+        .slide__head {
+          font-size: 35px;
+          line-height: 43px;
+          width: 100% !important;
+        }
+
+        .slide__desc {
+          font-size: 16px;
+          line-height: 24px;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .scroll__down {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    z-index: 100;
+    color: $SAMI_WHITE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $SAMI_GREEN;
+      .icon {
+        border: 1px solid $SAMI_GREEN;
+      }
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      transform: rotate(-90deg) translateX(60px);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 1px solid $SAMI_WHITE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 767px) {
+      .text {
+        font-size: 12px;
+        transform: rotate(-90deg) translateX(33px);
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+      }
+    }
+  }
+}

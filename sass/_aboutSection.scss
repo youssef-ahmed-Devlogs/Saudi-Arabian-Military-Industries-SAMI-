@@ -1,0 +1,25 @@
+.about__section {
+  color: $SAMI_WHITE;
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 5;
+
+  .head {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+    width: 80%;
+  }
+
+  .read__more {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}

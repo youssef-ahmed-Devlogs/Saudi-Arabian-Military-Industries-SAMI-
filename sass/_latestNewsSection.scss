@@ -1,0 +1,53 @@
+.latest__news {
+  margin-top: 200px;
+
+  .left__info {
+    width: 30%;
+    padding-left: 100px;
+
+    .head {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      color: $SAMI_WHITE;
+    }
+
+    .link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: $SAMI_WHITE;
+    }
+
+    .slider__controls {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  .slider {
+    width: 70%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 400px;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(
+        -90deg,
+        rgba($SAMI_BLUE, $alpha: 0.8) 10%,
+        rgba($SAMI_BLUE, $alpha: 0.01) 100%
+      );
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 70px;
+    }
+  }
+}

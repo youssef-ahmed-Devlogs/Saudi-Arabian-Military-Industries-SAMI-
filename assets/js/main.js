@@ -1,3 +1,16 @@
+// HOME LINE
+if (document.querySelector(".home_line") !== null) {
+  homeLine();
+
+  window.onresize = homeLine;
+
+  function homeLine() {
+    document.querySelector(".home_line").style.height = `${
+      document.querySelector(".subsidiaries__section .head").offsetTop + 30
+    }px`;
+  }
+}
+
 // ====== START HERO SECTION ======
 
 // HERO SIDEBAR
@@ -41,10 +54,10 @@ var heroSlider = new Swiper(".hero__slider", {
   keyboard: {
     enabled: true,
   },
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
 });
 
 // HERO SCROLL DOWN
@@ -57,3 +70,44 @@ scrollDownBtn.addEventListener("click", () => {
 });
 
 // ====== END HERO SECTION ======
+
+// ====== START board directors SECTION ======
+
+if (document.querySelector(".board__directors") !== null) {
+  const boardDirectors = document.querySelector(".board__directors");
+  const years = boardDirectors.querySelectorAll(".year");
+  years.forEach((year, index) => {
+    year.addEventListener("click", () => {
+      years.forEach((y) => y.classList.remove("active", "current"));
+      year.classList.toggle("current");
+
+      for (let i = 0; i <= index; i++) {
+        years[i].classList.toggle("active");
+      }
+
+      for (let i = index + 1; i < years.length; i++) {
+        years[i].style.right = `${i * 250}px`;
+      }
+    });
+  });
+}
+
+// ====== END board directors SECTION ======
+
+// ====== START latest__news SECTION ======
+
+var latestNewsSwiper = new Swiper(".latest__news-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    el: ".latest__news-swiper .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".latest__news .next",
+    prevEl: ".latest__news .prev",
+  },
+});
+
+// ====== END latest__news SECTION ======

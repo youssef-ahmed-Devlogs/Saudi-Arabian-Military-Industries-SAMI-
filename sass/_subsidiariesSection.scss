@@ -1,0 +1,18 @@
+.subsidiaries__section {
+  .head {
+    width: 400px;
+    color: $SAMI_GREEN;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .subsidiaries__company {
+    margin-top: 80px;
+
+    text-align: center;
+    img {
+      width: 250px;
+    }
+  }
+}

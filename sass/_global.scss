@@ -1,7 +1,6 @@
 body {
   font-family: "Tajawal", sans-serif;
   background-color: $SAMI_BLUE;
-  height: 4000px !important;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -31,5 +30,117 @@ ul {
 @media (max-width: 767px) {
   .container {
     max-width: 100%;
+  }
+}
+
+.home_line {
+  position: absolute;
+  right: 20%;
+  top: 0;
+  height: 200%;
+  width: 1px;
+  background-color: $SAMI_WHITE;
+  z-index: 4;
+
+  .arrow {
+    position: absolute;
+    bottom: -18.5px;
+    left: -40rem;
+    width: 20px;
+    z-index: 5;
+  }
+}
+
+.home_line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40rem;
+  height: 1px;
+  background-color: $SAMI_GREEN;
+}
+
+.read__more {
+  text-decoration: none;
+  color: $SAMI_GREEN;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: $SAMI_WHITE;
+  }
+}
+
+.sami__card {
+  border-right: 1px solid $SAMI_WHITE;
+  padding-right: 30px;
+
+  .top__text {
+    color: $SAMI_GREEN;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .title {
+    color: $SAMI_WHITE;
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .text {
+    color: $SAMI_GRAYLIGHT;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    .cat {
+      background-color: $SAMI_GRAY;
+      padding: 3px 15px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      color: $SAMI_WHITE;
+    }
+
+    .read__more {
+      font-weight: bold;
+    }
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+  left: 0;
+}
+
+.swiper-pagination {
+  text-align: initial;
+}
+
+.swiper-pagination-bullet {
+  background-color: $SAMI_WHITE;
+  opacity: 1;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $SAMI_GREEN;
   }
 }

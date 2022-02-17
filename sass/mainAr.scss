@@ -88,3 +88,39 @@ footer
   right: initial;
   left: -10px;
 }
+
+.topbar {
+  .topbar__content {
+    .logo {
+      text-align: left;
+    }
+
+    .right__space {
+      .return__website {
+        .arrow {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+.dictionary {
+  .hero__search form {
+    .search {
+      padding-left: 0;
+      padding: 18px 10px;
+      padding-right: 50px;
+
+      @media (max-width: 767px) {
+        padding: 8px 7px;
+        padding-right: 30px;
+      }
+    }
+
+    i {
+      left: initial;
+      right: 25px;
+    }
+  }
+}

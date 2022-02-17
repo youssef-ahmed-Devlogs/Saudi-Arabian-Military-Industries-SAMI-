@@ -165,3 +165,74 @@ ul {
     background-color: $SAMI_GREEN;
   }
 }
+
+.nav {
+  gap: 30px 40px;
+
+  @media (max-width: 767px) {
+    gap: 10px 20px;
+
+    .nav-link {
+      font-size: 12px !important;
+    }
+  }
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: none;
+  color: $SAMI_GREEN;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 0;
+  padding: 0;
+}
+
+.nav-pills .nav-link.active {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    height: 2.5px;
+    width: 85%;
+    background-color: $SAMI_GREEN;
+    transition: 0.3s ease-in-out;
+
+    @media (max-width: 767px) {
+      height: 1.5px;
+      bottom: -5px;
+    }
+  }
+}
+
+.pagination {
+  border: 1px solid $SAMI_WHITE;
+  width: max-content;
+  gap: 20px;
+  padding: 0 10px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+
+  .page-link {
+    background: none;
+    color: $SAMI_WHITE;
+    padding: 5px !important;
+    font-size: 14px;
+    border: none;
+
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+
+    &:hover {
+      color: $SAMI_GREEN;
+    }
+  }
+}

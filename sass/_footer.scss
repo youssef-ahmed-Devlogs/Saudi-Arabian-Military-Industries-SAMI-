@@ -6,6 +6,11 @@ footer {
     padding-top: 100px;
     padding-bottom: 100px;
 
+    @media (max-width: 767px) {
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+
     .head {
       font-weight: bold;
       font-size: 20px;
@@ -35,6 +40,11 @@ footer {
       align-items: center;
       gap: 20px 30px;
 
+      @media (max-width: 767px) {
+        gap: 10px;
+        justify-content: space-between;
+      }
+
       .title {
         font-weight: bold;
         font-size: 16px;
@@ -59,6 +69,12 @@ footer {
           justify-content: center;
           transition: 0.3s ease-in-out;
 
+          @media (max-width: 767px) {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+          }
+
           &:hover {
             background-color: $SAMI_BLUELIGHT;
           }
@@ -78,18 +94,29 @@ footer {
     padding: 80px 0 150px;
     background-color: $SAMI_BLUELIGHT;
 
+    @media (max-width: 767px) {
+      padding: 30px 0 50px;
+    }
+
     .head {
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
       color: $SAMI_WHITE;
       margin-bottom: 30px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
     }
 
     .brand {
       text-align: center;
       img {
         width: 200px;
+        @media (max-width: 767px) {
+          width: 100% !important;
+        }
       }
     }
 
@@ -105,6 +132,14 @@ footer {
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 0;
+
+        @media (max-width: 767px) {
+          max-width: 250px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
       }
 
       .terms__conditions-privacy {
@@ -115,6 +150,10 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 20px;
+
+        @media (max-width: 767px) {
+          font-size: 10px;
+        }
 
         .terms__conditions {
           position: relative;

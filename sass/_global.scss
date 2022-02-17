@@ -42,23 +42,35 @@ ul {
   background-color: $SAMI_WHITE;
   z-index: 4;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40rem;
+    height: 1px;
+    background-color: $SAMI_GREEN;
+
+    @media (max-width: 1300px) {
+      width: 20rem;
+    }
+  }
+
   .arrow {
     position: absolute;
     bottom: -18.5px;
     left: -40rem;
     width: 20px;
     z-index: 5;
-  }
-}
 
-.home_line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40rem;
-  height: 1px;
-  background-color: $SAMI_GREEN;
+    @media (max-width: 1300px) {
+      left: -20rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .read__more {
@@ -74,6 +86,11 @@ ul {
 .sami__card {
   border-right: 1px solid $SAMI_WHITE;
   padding-right: 30px;
+
+  @media (max-width: 767px) {
+    border-right: none;
+    padding-right: 0;
+  }
 
   .top__text {
     color: $SAMI_GREEN;
@@ -107,6 +124,10 @@ ul {
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+
+    @media (max-width: 767px) {
+      padding-right: 50px;
+    }
 
     .cat {
       background-color: $SAMI_GRAY;

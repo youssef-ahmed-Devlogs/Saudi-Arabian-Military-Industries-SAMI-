@@ -1,0 +1,73 @@
+body {
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.home_line {
+  right: initial;
+  left: 20%;
+}
+.home_line::after {
+  right: initial;
+  left: 0;
+}
+.home_line .arrow {
+  left: initial;
+  right: -40rem;
+  transform: rotate(180deg);
+}
+@media (max-width: 1300px) {
+  .home_line .arrow {
+    right: -20rem;
+  }
+}
+
+.sidebar {
+  left: initial;
+  right: -300%;
+}
+.sidebar.open {
+  right: 0;
+}
+
+.hero__section .scroll__down {
+  right: initial;
+  left: 30px;
+}
+
+.latest__news .slider::after {
+  right: initial;
+  left: 0;
+  background: linear-gradient(90deg, rgba(32, 66, 79, 0.8) 10%, rgba(32, 66, 79, 0.01) 100%);
+}
+
+.sami__card {
+  border: none;
+  padding-right: 0;
+  padding-left: 30px;
+  border-left: 1px solid #fff;
+}
+
+.latest__news .left__info {
+  padding-left: 0;
+  padding-right: 100px;
+}
+@media (max-width: 767px) {
+  .latest__news .left__info {
+    padding-right: 0;
+  }
+}
+.latest__news .left__info .slider__controls {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .latest__news {
+    padding: 0 20px;
+  }
+}
+
+footer .bottom__footer .copyright__section .terms__conditions-privacy .terms__conditions::after {
+  right: initial;
+  left: -10px;
+}

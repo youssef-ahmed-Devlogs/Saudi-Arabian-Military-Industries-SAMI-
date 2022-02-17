@@ -9,10 +9,26 @@
 
   .subsidiaries__company {
     margin-top: 80px;
-
     text-align: center;
+
     img {
       width: 250px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .head {
+      width: 100%;
+      font-size: 20px;
+      line-height: initial;
+    }
+
+    .subsidiaries__company {
+      margin-top: 20px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

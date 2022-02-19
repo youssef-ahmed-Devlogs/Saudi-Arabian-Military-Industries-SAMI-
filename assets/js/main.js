@@ -128,3 +128,24 @@ if (document.querySelector(".latest__news-swiper") !== null) {
 }
 
 // ====== END latest__news SECTION ======
+
+// ====== START CARD Collapse ======
+
+const cardsCollapse = document.querySelectorAll(".card_collapse");
+cardsCollapse.forEach((card) => {
+  const moreInfoBtn = card.querySelector(".show__more");
+
+  moreInfoBtn.addEventListener("click", () => {
+    cardsCollapse.forEach((ele) => {
+      ele.classList.remove("active");
+    });
+
+    card.classList.toggle("active");
+
+    card.querySelector(".fa-xmark").addEventListener("click", () => {
+      card.classList.remove("active");
+    });
+  });
+});
+
+// ====== END CARD Collapse ======

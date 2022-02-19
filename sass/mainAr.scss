@@ -124,3 +124,16 @@ footer
     }
   }
 }
+
+.leadership__page {
+  .fa-xmark {
+    left: initial;
+    right: 20px;
+  }
+
+  &.collapse__row.active {
+    .fa-xmark {
+      right: 30px;
+    }
+  }
+}

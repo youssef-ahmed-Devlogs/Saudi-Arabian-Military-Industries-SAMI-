@@ -58,7 +58,7 @@ if (document.querySelector(".sidebar") !== null) {
       enabled: true,
     },
     autoplay: {
-      delay: 4000,
+      delay: 8000,
       disableOnInteraction: false,
     },
   });
@@ -78,21 +78,32 @@ if (document.querySelector(".sidebar") !== null) {
 // ====== START board directors SECTION ======
 
 if (document.querySelector(".board__directors") !== null) {
-  const boardDirectors = document.querySelector(".board__directors");
-  const years = boardDirectors.querySelectorAll(".year");
-  years.forEach((year, index) => {
-    year.addEventListener("click", () => {
-      years.forEach((y) => y.classList.remove("active", "current"));
-      year.classList.toggle("current");
+  var latestNewsSwiper = new Swiper(".board__directors-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".board__directors-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".board__directors .next",
+      prevEl: ".board__directors .prev",
+    },
+  });
 
-      for (let i = 0; i <= index; i++) {
-        years[i].classList.toggle("active");
-      }
+  const swiperPagination = document.querySelector(
+    ".board__directors .swiper-pagination"
+  );
+  const swiperPaginationBullets = document.querySelectorAll(
+    ".board__directors .swiper-pagination-bullet"
+  );
 
-      for (let i = index + 1; i < years.length; i++) {
-        years[i].style.right = `${i * 250}px`;
-      }
-    });
+  let years = swiperPagination.dataset.years.split(",");
+
+  swiperPaginationBullets.forEach((bullet, index) => {
+    if (index < years.length) {
+      bullet.setAttribute("data-before", years[index]);
+    }
   });
 }
 
@@ -112,7 +123,7 @@ if (document.querySelector(".latest__news-swiper") !== null) {
       prevEl: ".latest__news .prev",
     },
     breakpoints: {
-      0: {
+      991: {
         spaceBetween: 20,
       },
       992: {
@@ -149,3 +160,33 @@ cardsCollapse.forEach((card) => {
 });
 
 // ====== END CARD Collapse ======
+
+if (document.querySelector(".aboutUs__slider-swiper") != null) {
+  var swiper = new Swiper(".aboutUs__slider-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    // centeredSlides: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: ".aboutUs__slider .next",
+      prevEl: ".aboutUs__slider .prev",
+    },
+    breakpoints: {
+      991: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+}

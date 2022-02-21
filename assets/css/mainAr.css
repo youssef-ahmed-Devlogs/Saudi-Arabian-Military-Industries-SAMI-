@@ -102,3 +102,83 @@ footer .bottom__footer .copyright__section .terms__conditions-privacy .terms__co
 .card_collapse.collapse__row.active .fa-xmark {
   right: 30px;
 }
+
+.board__directors .board__directors-swiper .slider-content {
+  margin-left: initial !important;
+  margin-right: auto;
+}
+@media (max-width: 1199px) {
+  .board__directors .board__directors-swiper .slider-content {
+    padding-left: 0;
+    padding-right: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .board__directors .board__directors-swiper .slider-content {
+    padding-right: 40px;
+  }
+}
+.board__directors .board__directors-swiper .slider-content .year {
+  left: 0;
+  right: -10%;
+  transform: translateX(0);
+}
+.board__directors .board__directors-swiper .slider__controls {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1199px) {
+  .board__directors .board__directors-swiper .slider__controls {
+    flex-direction: column;
+  }
+}
+.board__directors .board__directors-swiper .swiper-pagination {
+  left: initial;
+  right: -10px;
+  padding-right: 20px;
+}
+.board__directors .board__directors-swiper .swiper-pagination .swiper-pagination-bullet::before {
+  left: initial;
+  right: -20px;
+}
+
+.aboutUs__page .aboutUs__intro .left,
+.aboutUs__page .aboutUs__intro .right {
+  padding-left: initial;
+  padding-right: 30px;
+}
+.aboutUs__page .aboutUs__intro::after {
+  left: initial;
+  right: 45%;
+}
+@media (max-width: 1250px) {
+  .aboutUs__page .aboutUs__intro::after {
+    left: initial;
+    right: 47%;
+  }
+}
+@media (max-width: 1199px) {
+  .aboutUs__page .aboutUs__intro::after {
+    left: initial;
+    right: 10px;
+  }
+}
+.aboutUs__page .aboutUs__intro::before {
+  left: initial;
+  right: calc(45% - 19px);
+  transform: rotate(90deg);
+}
+@media (max-width: 1199px) {
+  .aboutUs__page .aboutUs__intro::before {
+    left: initial;
+    right: -9px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutUs__page .aboutUs__intro::before {
+    left: initial;
+    right: -2px;
+  }
+}
+.aboutUs__page .aboutUs__slider .slider__head .slider__controls {
+  flex-direction: row-reverse !important;
+}

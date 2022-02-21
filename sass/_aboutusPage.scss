@@ -1,0 +1,250 @@
+.aboutUs__page {
+  .aboutUs__intro {
+    padding: 100px 0;
+    color: $SAMI_WHITE;
+    position: relative;
+
+    @media (max-width: 767px) {
+      padding: 50px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 45%;
+      top: 100px;
+      width: 1px;
+      height: calc(100% - 100px);
+      background-color: $SAMI_WHITE;
+
+      @media (max-width: 1250px) {
+        left: 47%;
+      }
+
+      @media (max-width: 1199px) {
+        left: 10px;
+      }
+
+      @media (max-width: 767px) {
+        top: 50px;
+        height: calc(100% - 50px);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(45% - 19px);
+      bottom: -26px;
+      background-image: url("../images/Homepage/arrow1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      transform: rotate(90deg);
+
+      @media (max-width: 1199px) {
+        left: -9px;
+      }
+
+      @media (max-width: 767px) {
+        width: 25px;
+        height: 25px;
+        left: -2px;
+        bottom: -18px;
+      }
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 200px;
+      width: 500px;
+
+      @media (max-width: 1199px) {
+        width: 100%;
+        padding-left: 30px;
+        gap: 20px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 500px;
+
+      @media (max-width: 1199px) {
+        width: 100%;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .head__text {
+    .head {
+      font-size: 20px;
+      font-weight: 800;
+      color: $SAMI_GREEN;
+      margin-bottom: 1px;
+
+      @media (max-width: 767px) {
+        font-size: 17px;
+      }
+    }
+
+    .text {
+      font-size: 15px;
+      color: $SAMI_WHITE;
+
+      @media (max-width: 767px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .aboutUs__slider {
+    margin-top: 100px;
+
+    @media (max-width: 767px) {
+      margin-top: 50px;
+    }
+
+    .slider__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+
+      .head {
+        font-size: 40px;
+        font-weight: 700;
+        color: $SAMI_GREEN;
+        max-width: 700px;
+
+        @media (max-width: 767px) {
+          font-size: 28px;
+        }
+      }
+
+      .slider__controls {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 767px) {
+          gap: 15px;
+          .prev,
+          .next {
+            img {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .aboutUs__slider-swiper {
+      img {
+        width: 100%;
+        //object-fit: cover;
+      }
+    }
+  }
+
+  .aboutUS__tabs {
+    margin-top: 100px;
+
+    @media (max-width: 767px) {
+      margin-top: 50px;
+    }
+
+    .head {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      max-width: 800px;
+      color: $SAMI_WHITE;
+
+      @media (max-width: 767px) {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .nav {
+      margin-bottom: 50px !important;
+
+      @media (max-width: 767px) {
+        margin-bottom: 30px !important;
+      }
+    }
+
+    .tab-content {
+      .items {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px 10px;
+        color: $SAMI_WHITE !important;
+        flex-wrap: wrap;
+
+        .icon__collapse-container {
+          width: calc((100% / 5) - 10px);
+
+          @media (max-width: 1199px) {
+            width: calc((100% / 3) - 10px);
+          }
+
+          @media (max-width: 767px) {
+            width: calc((100% / 2) - 10px);
+          }
+
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+
+          .icon__collapse {
+            border: none;
+            outline: none;
+            background: none;
+            box-shadow: none;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: $SAMI_GREEN;
+            font-weight: 700;
+            font-size: 14px;
+
+            text-align: center;
+            .icon {
+              img {
+                width: 50px;
+              }
+            }
+          }
+
+          .collapse {
+            border-top: 1px solid $SAMI_WHITE;
+            padding-top: 10px;
+            color: $SAMI_WHITE !important;
+
+            .text {
+              color: $SAMI_WHITE !important;
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

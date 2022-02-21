@@ -134,12 +134,20 @@
                             <div class="right">
                                 <span class="text">View By : </span>
                                 <form action="">
-                                    <select name="fields__char" class="fields__char">
+                                    <select
+                                            name="fields__char"
+                                            class="fields__char"
+                                            onchange="this.form.submit()"
+                                    >
                                         <option value="A">A</option>
                                         <option value="B">B</option>
                                         <option value="C">C</option>
                                     </select>
-                                    <select name="fields__count" class="fields__count">
+                                    <select
+                                            name="fields__count"
+                                            class="fields__count"
+                                            onchange="this.form.submit()"
+                                    >
                                         <option value="10">10 Fields</option>
                                         <option value="20">20 Fields</option>
                                         <option value="30">30 Fields</option>

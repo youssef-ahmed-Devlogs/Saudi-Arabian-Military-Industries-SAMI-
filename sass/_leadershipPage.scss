@@ -33,7 +33,7 @@
     }
 
     .nav-link.active::after {
-      width: calc(100% + 50px);
+      width: 100%;
 
       @media (max-width: 767px) {
         width: 100%;

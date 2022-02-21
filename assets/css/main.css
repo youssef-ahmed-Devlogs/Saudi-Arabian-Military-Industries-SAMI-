@@ -1123,7 +1123,7 @@
   }
 }
 .leadership__page .nav .nav-link.active::after {
-  width: calc(100% + 50px);
+  width: 100%;
 }
 @media (max-width: 767px) {
   .leadership__page .nav .nav-link.active::after {
@@ -1302,6 +1302,74 @@
 }
 .leadership__card.collapse__row.active .more__info .download__link {
   margin: 0;
+}
+
+.samigroup__page {
+  padding: 50px 0;
+}
+@media (max-width: 767px) {
+  .samigroup__page {
+    padding: 30px 0;
+  }
+}
+.samigroup__page .nav {
+  position: relative;
+}
+.samigroup__page .nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  z-index: -1;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .samigroup__page .nav::after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .samigroup__page .nav .nav-item {
+    width: calc(50% - 10px);
+  }
+  .samigroup__page .nav .nav-item .nav-link {
+    width: 100%;
+  }
+}
+.samigroup__page .nav .nav-link.active::after {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .samigroup__page .nav .nav-link.active::after {
+    width: 100%;
+  }
+}
+.samigroup__page .cards_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  gap: 70px 20px;
+}
+.samigroup__page .cards_content .card_collapse {
+  width: calc(33.3333333333% - 20px);
+}
+@media (max-width: 1199px) {
+  .samigroup__page .cards_content .card_collapse {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .samigroup__page .cards_content .card_collapse {
+    width: 100%;
+  }
+}
+.samigroup__page .cards_content .card__img {
+  text-align: center;
+}
+.samigroup__page .cards_content .card__img img {
+  width: 300px;
 }
 
 footer {
@@ -1696,4 +1764,134 @@ ul {
 }
 .pagination .page-link:hover {
   color: #70a951;
+}
+
+.card_collapse {
+  position: relative;
+}
+.card_collapse .fa-xmark {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+@media (max-width: 767px) {
+  .card_collapse .fa-xmark {
+    font-size: 12px;
+  }
+}
+.card_collapse .more__info {
+  display: none;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+.card_collapse .more__info .text {
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .card_collapse .more__info .text {
+    font-size: 13px;
+  }
+}
+.card_collapse .more__info .download__link {
+  background-color: #70a951;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .card_collapse .more__info .download__link {
+    font-size: 13px;
+    padding: 5px 7px;
+  }
+}
+.card_collapse .more__info .download__link:hover {
+  color: #20424f;
+  background-color: #fff;
+}
+.card_collapse .show__more {
+  display: block;
+  color: #70a951;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+.card_collapse .show__more i {
+  font-size: 10px;
+}
+.card_collapse .show__more:hover {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .card_collapse .show__more {
+    font-size: 12px;
+  }
+  .card_collapse .show__more i {
+    font-size: 6px;
+  }
+}
+.card_collapse.active .more__info,
+.card_collapse.active .fa-xmark {
+  display: block;
+}
+.card_collapse.collapse__row.active {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .card_collapse.collapse__row.active {
+    flex-direction: column;
+  }
+}
+.card_collapse.collapse__row.active .fa-xmark {
+  left: 30px;
+  top: 30px;
+}
+.card_collapse.collapse__row.active .main__info {
+  flex: 1;
+}
+.card_collapse.collapse__row.active .more__info {
+  flex: 2;
+  text-align: initial;
+}
+.card_collapse.collapse__row.active .more__info .download__link {
+  margin: 0;
+}
+.card_collapse.active .more__info,
+.card_collapse.active .fa-xmark {
+  display: block;
+}
+.card_collapse.collapse__row.active {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .card_collapse.collapse__row.active {
+    flex-direction: column;
+  }
+}
+.card_collapse.collapse__row.active .fa-xmark {
+  left: 30px;
+  top: 30px;
+}
+.card_collapse.collapse__row.active .main__info {
+  flex: 1;
+}
+.card_collapse.collapse__row.active .more__info {
+  flex: 2;
+  text-align: initial;
+}
+.card_collapse.collapse__row.active .more__info .download__link {
+  margin: 0;
 }

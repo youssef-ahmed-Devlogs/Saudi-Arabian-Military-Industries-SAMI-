@@ -236,3 +236,152 @@ ul {
     }
   }
 }
+
+.card_collapse {
+  position: relative;
+  .fa-xmark {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: $SAMI_WHITE;
+    display: none;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+
+  .more__info {
+    display: none;
+    text-align: center;
+    color: $SAMI_WHITE;
+    margin-top: 10px;
+
+    .text {
+      font-size: 15px;
+
+      @media (max-width: 767px) {
+        font-size: 13px;
+      }
+    }
+
+    .download__link {
+      background-color: $SAMI_GREEN;
+      color: $SAMI_WHITE;
+      display: block;
+      font-size: 15px;
+      padding: 10px;
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        font-size: 13px;
+        padding: 5px 7px;
+      }
+
+      &:hover {
+        color: $SAMI_BLUE;
+        background-color: $SAMI_WHITE;
+      }
+    }
+  }
+
+  .show__more {
+    display: block;
+    color: $SAMI_GREEN;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    text-align: center;
+
+    i {
+      font-size: 10px;
+    }
+
+    &:hover {
+      color: $SAMI_WHITE;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+
+      i {
+        font-size: 6px;
+      }
+    }
+  }
+
+  &.active {
+    .more__info,
+    .fa-xmark {
+      display: block;
+    }
+  }
+
+  &.collapse__row.active {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 1199px) {
+      flex-direction: column;
+    }
+
+    .fa-xmark {
+      left: 30px;
+      top: 30px;
+    }
+
+    .main__info {
+      flex: 1;
+    }
+
+    .more__info {
+      flex: 2;
+      text-align: initial;
+
+      .download__link {
+        margin: 0;
+      }
+    }
+  }
+
+  &.active {
+    .more__info,
+    .fa-xmark {
+      display: block;
+    }
+  }
+
+  &.collapse__row.active {
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .fa-xmark {
+      left: 30px;
+      top: 30px;
+    }
+
+    .main__info {
+      flex: 1;
+    }
+
+    .more__info {
+      flex: 2;
+      text-align: initial;
+
+      .download__link {
+        margin: 0;
+      }
+    }
+  }
+}

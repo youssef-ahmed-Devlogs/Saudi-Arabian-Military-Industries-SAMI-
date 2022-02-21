@@ -95,10 +95,10 @@ footer .bottom__footer .copyright__section .terms__conditions-privacy .terms__co
   right: 25px;
 }
 
-.leadership__page .fa-xmark {
+.card_collapse .fa-xmark {
   left: initial;
   right: 20px;
 }
-.leadership__page.collapse__row.active .fa-xmark {
+.card_collapse.collapse__row.active .fa-xmark {
   right: 30px;
 }

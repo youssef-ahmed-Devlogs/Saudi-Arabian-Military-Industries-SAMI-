@@ -1,0 +1,61 @@
+.suppliers__page {
+  padding: 100px 0;
+
+  @media (max-width: 767px) {
+    padding: 50px 0;
+  }
+
+  .verification__rigister {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $SAMI_WHITE;
+
+    @media (max-width: 767px) {
+      margin-top: 50px;
+    }
+
+    .login__regiser {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .download__link {
+        width: 200px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      .login.download__link {
+        background-color: $SAMI_WHITE;
+        color: $SAMI_BLUE;
+
+        &:hover {
+          background-color: $SAMI_GREEN;
+          color: $SAMI_WHITE;
+        }
+      }
+    }
+
+    .text {
+      font-size: 14px;
+      max-width: 700px;
+      margin-top: 20px;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

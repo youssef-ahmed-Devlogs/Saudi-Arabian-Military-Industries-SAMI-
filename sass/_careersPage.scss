@@ -1,0 +1,116 @@
+.careers__page {
+  .head__text {
+    background-color: $SAMI_WHITE;
+    padding: 100px 0 150px;
+
+    @media (max-width: 767px) {
+      padding: 70px 0;
+    }
+
+    .head {
+      font-size: 40px;
+
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    .text {
+      color: $SAMI_BLUE;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .available__careers {
+    position: relative;
+    padding-bottom: 200px;
+
+    @media (max-width: 1199px) {
+      padding: 70px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      transform: translateX(-50%);
+      border: 1px solid $SAMI_WHITE;
+      width: calc(100% - 200px);
+      height: 350px;
+      z-index: -1;
+
+      @media (max-width: 1199px) {
+        top: 5%;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .careers__card {
+      text-align: center;
+      transform: translateY(-55px);
+
+      @media (max-width: 1199px) {
+        transform: translate(0);
+      }
+
+      img {
+        width: 550px;
+        height: 364px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          height: initial;
+          object-fit: cover;
+        }
+      }
+
+      &.hq2 {
+        transform: translateY(200px);
+
+        @media (max-width: 1199px) {
+          transform: translate(0);
+        }
+
+        img {
+          width: 430px;
+          height: 500px;
+
+          @media (max-width: 767px) {
+            width: 100%;
+            height: initial;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .title {
+        color: $SAMI_WHITE;
+        font-size: 25px;
+        font-weight: 400;
+        max-width: 500px;
+        margin: 30px auto 20px;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+          margin: 10px auto;
+        }
+      }
+
+      .download__link {
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

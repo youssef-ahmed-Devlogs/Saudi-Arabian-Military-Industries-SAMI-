@@ -239,6 +239,9 @@
     width: 80px;
   }
 }
+.hero__section .hero__slider {
+  height: 100vh;
+}
 .hero__section .slide__content img,
 .hero__section .slide__content video {
   width: 100%;
@@ -1577,26 +1580,6 @@
     padding-left: 30px;
   }
 }
-.aboutUs__page .head__text .head {
-  font-size: 20px;
-  font-weight: 800;
-  color: #70a951;
-  margin-bottom: 1px;
-}
-@media (max-width: 767px) {
-  .aboutUs__page .head__text .head {
-    font-size: 17px;
-  }
-}
-.aboutUs__page .head__text .text {
-  font-size: 15px;
-  color: #fff;
-}
-@media (max-width: 767px) {
-  .aboutUs__page .head__text .text {
-    font-size: 13px;
-  }
-}
 .aboutUs__page .aboutUs__slider {
   margin-top: 100px;
 }
@@ -1726,6 +1709,184 @@
   color: #fff !important;
   font-size: 12px;
   font-weight: 400;
+}
+
+.careers__page .head__text {
+  background-color: #fff;
+  padding: 100px 0 150px;
+}
+@media (max-width: 767px) {
+  .careers__page .head__text {
+    padding: 70px 0;
+  }
+}
+.careers__page .head__text .head {
+  font-size: 40px;
+}
+@media (max-width: 767px) {
+  .careers__page .head__text .head {
+    font-size: 24px;
+  }
+}
+.careers__page .head__text .text {
+  color: #20424f;
+}
+@media (max-width: 767px) {
+  .careers__page .head__text .text {
+    font-size: 14px;
+  }
+}
+.careers__page .available__careers {
+  position: relative;
+  padding-bottom: 200px;
+}
+@media (max-width: 1199px) {
+  .careers__page .available__careers {
+    padding: 70px 0;
+  }
+}
+.careers__page .available__careers::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  width: calc(100% - 200px);
+  height: 350px;
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .careers__page .available__careers::after {
+    top: 5%;
+  }
+}
+@media (max-width: 767px) {
+  .careers__page .available__careers::after {
+    display: none;
+  }
+}
+.careers__page .available__careers .careers__card {
+  text-align: center;
+  transform: translateY(-55px);
+}
+@media (max-width: 1199px) {
+  .careers__page .available__careers .careers__card {
+    transform: translate(0);
+  }
+}
+.careers__page .available__careers .careers__card img {
+  width: 550px;
+  height: 364px;
+}
+@media (max-width: 767px) {
+  .careers__page .available__careers .careers__card img {
+    width: 100%;
+    height: initial;
+    object-fit: cover;
+  }
+}
+.careers__page .available__careers .careers__card.hq2 {
+  transform: translateY(200px);
+}
+@media (max-width: 1199px) {
+  .careers__page .available__careers .careers__card.hq2 {
+    transform: translate(0);
+  }
+}
+.careers__page .available__careers .careers__card.hq2 img {
+  width: 430px;
+  height: 500px;
+}
+@media (max-width: 767px) {
+  .careers__page .available__careers .careers__card.hq2 img {
+    width: 100%;
+    height: initial;
+    object-fit: cover;
+  }
+}
+.careers__page .available__careers .careers__card .title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 30px auto 20px;
+}
+@media (max-width: 767px) {
+  .careers__page .available__careers .careers__card .title {
+    font-size: 18px;
+    margin: 10px auto;
+  }
+}
+.careers__page .available__careers .careers__card .download__link {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .careers__page .available__careers .careers__card .download__link {
+    font-size: 13px;
+  }
+}
+
+.suppliers__page {
+  padding: 100px 0;
+}
+@media (max-width: 767px) {
+  .suppliers__page {
+    padding: 50px 0;
+  }
+}
+.suppliers__page .verification__rigister {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .suppliers__page .verification__rigister {
+    margin-top: 50px;
+  }
+}
+.suppliers__page .verification__rigister .login__regiser {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .suppliers__page .verification__rigister .login__regiser {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.suppliers__page .verification__rigister .login__regiser .download__link {
+  width: 200px;
+}
+@media (max-width: 767px) {
+  .suppliers__page .verification__rigister .login__regiser .download__link {
+    width: 100%;
+  }
+}
+.suppliers__page .verification__rigister .login__regiser .login.download__link {
+  background-color: #fff;
+  color: #20424f;
+}
+.suppliers__page .verification__rigister .login__regiser .login.download__link:hover {
+  background-color: #70a951;
+  color: #fff;
+}
+.suppliers__page .verification__rigister .text {
+  font-size: 14px;
+  max-width: 700px;
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .suppliers__page .verification__rigister .text {
+    font-size: 12px;
+    margin-top: 10px;
+  }
 }
 
 footer {
@@ -2250,4 +2411,104 @@ ul {
 }
 .card_collapse.collapse__row.active .more__info .download__link {
   margin: 0;
+}
+
+.head__text .head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #70a951;
+  margin-bottom: 1px;
+}
+@media (max-width: 767px) {
+  .head__text .head {
+    font-size: 17px;
+  }
+}
+.head__text .text {
+  font-size: 15px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .head__text .text {
+    font-size: 13px;
+  }
+}
+
+.download__link {
+  background-color: #70a951;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: max-content;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .download__link {
+    font-size: 13px;
+    padding: 5px 7px;
+  }
+}
+.download__link:hover {
+  color: #20424f;
+  background-color: #fff;
+}
+
+.quote .quote__text {
+  border: 1px solid #70a951;
+  padding: 30px 60px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .quote .quote__text {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+.quote .quote__user {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .quote .quote__user {
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+.quote .quote__user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 767px) {
+  .quote .quote__user img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.quote .quote__user .username {
+  display: block;
+}
+@media (max-width: 767px) {
+  .quote .quote__user .username {
+    font-size: 13px;
+  }
+}
+.quote .quote__user .user__title {
+  display: block;
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .quote .quote__user .user__title {
+    font-size: 11px;
+  }
 }

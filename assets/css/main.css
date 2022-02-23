@@ -1889,6 +1889,94 @@
   }
 }
 
+.contactUs__page {
+  padding: 100px 0 50px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .contactUs__page {
+    padding: 50px 0;
+  }
+}
+.contactUs__page .head {
+  color: #70a951;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .head {
+    font-size: 16px;
+  }
+}
+.contactUs__page .contact__info {
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .contact__info {
+    font-size: 12px;
+  }
+}
+.contactUs__page .contact__info .phone,
+.contactUs__page .contact__info .email {
+  display: block;
+  margin-bottom: 6px;
+}
+.contactUs__page .contact__info .social__links {
+  gap: 10px 20px;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .contact__info .social__links {
+    justify-content: initial;
+  }
+}
+.contactUs__page .contact__info .social__links .title,
+.contactUs__page .contact__info .social__links .icon {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .contact__info .social__links .title,
+.contactUs__page .contact__info .social__links .icon {
+    font-size: 12px;
+  }
+}
+.contactUs__page .company__location .text {
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .company__location .text {
+    font-size: 12px;
+  }
+}
+.contactUs__page .company__location .text.text__light {
+  color: #e5e5e5;
+}
+.contactUs__page .company__location .map {
+  display: block;
+  width: 480px;
+}
+@media (max-width: 767px) {
+  .contactUs__page .company__location .map {
+    width: 100%;
+  }
+}
+.contactUs__page .company__location .map img {
+  width: 100%;
+}
+
+.aeronautics__page {
+  padding: 100px 0 50px;
+}
+@media (max-width: 767px) {
+  .aeronautics__page {
+    padding: 50px 0 0;
+  }
+}
+.aeronautics__page .head {
+  font-weight: 700 !important;
+}
+
 footer {
   margin-top: 100px;
 }
@@ -2510,5 +2598,133 @@ ul {
 @media (max-width: 767px) {
   .quote .quote__user .user__title {
     font-size: 11px;
+  }
+}
+
+.social__links {
+  display: flex;
+  align-items: center;
+  gap: 20px 30px;
+}
+@media (max-width: 767px) {
+  .social__links {
+    gap: 10px;
+    justify-content: space-between;
+  }
+}
+.social__links .title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+.social__links .list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.social__links .list .icon {
+  color: #fff;
+  font-size: 15px;
+  background-color: #2b4958;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .social__links .list .icon {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+.social__links .list .icon:hover {
+  background-color: #49606c;
+}
+
+.head__ol .head {
+  font-size: 20px;
+  font-weight: 700px;
+  color: #70a951;
+}
+.head__ol ol {
+  font-size: 15px;
+  color: #fff;
+  padding: 15px;
+}
+
+.side__card {
+  background-color: #328315;
+  width: 85%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  padding: 50px;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .side__card {
+    padding: 30px;
+  }
+}
+.side__card .logo {
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  .side__card .logo {
+    margin-bottom: 20px;
+  }
+}
+.side__card .logo img {
+  width: 480px;
+}
+@media (max-width: 992px) {
+  .side__card .logo img {
+    width: 100%;
+  }
+}
+.side__card .text {
+  font-size: 15px;
+}
+@media (max-width: 992px) {
+  .side__card .text.mb-5 {
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  .side__card .text {
+    font-size: 12px;
+  }
+}
+.side__card .text strong {
+  display: block;
+}
+.side__card .products {
+  width: 600px;
+}
+@media (max-width: 992px) {
+  .side__card .products {
+    width: initial;
+  }
+}
+.side__card .products .title {
+  font-size: 15px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .side__card .products .title {
+    font-size: 12px;
+  }
+}
+.side__card .products .list li {
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  .side__card .products .list li {
+    font-size: 12px;
   }
 }

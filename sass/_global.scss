@@ -486,3 +486,138 @@ ul {
     }
   }
 }
+
+.social__links {
+  display: flex;
+  align-items: center;
+  gap: 20px 30px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: $SAMI_WHITE;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon {
+      color: $SAMI_WHITE;
+      font-size: 15px;
+      background-color: $SAMI_BLUEALT;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+
+      @media (max-width: 767px) {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+      }
+
+      &:hover {
+        background-color: $SAMI_BLUELIGHT;
+      }
+    }
+  }
+}
+
+.head__ol {
+  .head {
+    font-size: 20px;
+    font-weight: 700px;
+    color: $SAMI_GREEN;
+  }
+
+  ol {
+    font-size: 15px;
+    color: $SAMI_WHITE;
+    padding: 15px;
+  }
+}
+
+.side__card {
+  background-color: #328315;
+  width: 85%;
+  box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
+  margin-left: auto;
+  padding: 50px;
+  color: $SAMI_WHITE;
+
+  @media (max-width: 992px) {
+    padding: 30px;
+  }
+
+  .logo {
+    margin-bottom: 50px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 480px;
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .text {
+    font-size: 15px;
+
+    @media (max-width: 992px) {
+      &.mb-5 {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
+    strong {
+      display: block;
+    }
+  }
+
+  .products {
+    width: 600px;
+
+    @media (max-width: 992px) {
+      width: initial;
+    }
+
+    .title {
+      font-size: 15px;
+      font-weight: 700;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+
+    .list {
+      li {
+        font-size: 14px;
+        font-weight: 300;
+
+        @media (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

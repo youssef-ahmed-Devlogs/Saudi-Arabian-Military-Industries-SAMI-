@@ -182,3 +182,8 @@ footer .bottom__footer .copyright__section .terms__conditions-privacy .terms__co
 .aboutUs__page .aboutUs__slider .slider__head .slider__controls {
   flex-direction: row-reverse !important;
 }
+
+.side__card {
+  margin-left: initial;
+  margin-right: auto;
+}

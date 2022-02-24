@@ -1,0 +1,142 @@
+.article__page {
+  padding: 120px 0 50px;
+  @media (max-width: 767px) {
+    padding: 80px 0 30px;
+  }
+
+  .content {
+    .breadcrump {
+      margin: 20px 0;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (max-width: 767px) {
+        font-size: 15px;
+        margin: 10px 0;
+      }
+
+      .link {
+        color: $SAMI_GREEN;
+        position: relative;
+
+        &.active {
+          color: $SAMI_WHITE;
+        }
+
+        &:not(:last-child):after {
+          content: "/";
+          position: absolute;
+          right: -13px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .article {
+      @media (max-width: 1199px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .head {
+      color: $SAMI_GREEN;
+      margin-bottom: 40px;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .text {
+      color: $SAMI_WHITE;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    .article__info {
+      color: $SAMI_WHITE;
+
+      & > li {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .key {
+          font-size: 15px;
+          font-weight: 700;
+
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+
+        .value {
+          font-size: 14px;
+          font-weight: 500;
+
+          @media (max-width: 767px) {
+            font-size: 12px;
+          }
+
+          .icon {
+            color: $SAMI_WHITE;
+            position: relative;
+            transition: 0.3s ease-in-out;
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: 25px;
+              top: 0;
+              width: 1px;
+              height: 100%;
+              background-color: rgba($SAMI_WHITE, $alpha: 0.3);
+
+              @media (max-width: 767px) {
+                right: 17px;
+              }
+            }
+
+            &:hover {
+              color: $SAMI_GREEN;
+            }
+          }
+        }
+      }
+
+      & > li:not(:last-child) {
+        border-bottom: 1px solid rgba($SAMI_WHITE, $alpha: 0.3);
+      }
+    }
+  }
+
+  .more {
+    .head {
+      color: $SAMI_GREEN;
+      font-size: 20px;
+      border-bottom: 2px solid $SAMI_GREEN;
+      padding-bottom: 5px;
+      margin-bottom: 40px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .sami__card {
+      border: none;
+
+      .top__text {
+        color: $SAMI_WHITE;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.mediaCenter__page {
+  padding: 50px 0;
+
+  .nav {
+    margin-bottom: 50px !important;
+    gap: 5px 10px;
+    align-items: center;
+
+    .nav-link {
+      color: $SAMI_WHITE;
+      border: 1px solid $SAMI_WHITE;
+      padding: 5px 10px;
+      transition: 0.3s ease-in-out;
+
+      &.active {
+        color: $SAMI_WHITE;
+        padding: 5px 10px;
+      }
+
+      &.active,
+      &:hover {
+        background-color: $SAMI_GREEN;
+        border-color: $SAMI_GREEN;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    form {
+      select {
+        background: $SAMI_BLUE;
+        outline: none;
+        color: $SAMI_WHITE;
+        border: 1px solid $SAMI_WHITE;
+        padding: 7px 10px;
+        transition: 0.3s ease-in-out;
+        display: block;
+        font-size: 15px;
+
+        @media (max-width: 767px) {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  .sami__card {
+    border: none;
+
+    .top__text {
+      color: $SAMI_WHITE;
+    }
+  }
+
+  .slider {
+    margin-left: 50px;
+    position: relative;
+
+    @media (max-width: 992px) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 400px;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(
+        -90deg,
+        rgba(32, 66, 79, 0.8) 10%,
+        rgba(32, 66, 79, 0.01) 100%
+      );
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  .files__links {
+    margin-top: 100px;
+
+    .top__info {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 15px;
+      }
+
+      .head {
+        color: $SAMI_WHITE;
+        font-size: 28px;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+
+      .slider__controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width: 767px) {
+          gap: 15px;
+
+          .prev,
+          .next {
+            margin-top: -10px;
+            img {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

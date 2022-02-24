@@ -48,29 +48,31 @@ if (document.querySelector(".sidebar") !== null) {
     }
   });
 
-  // HERO SLIDER
-  var heroSlider = new Swiper(".hero__slider", {
-    loop: true,
-    lazy: true,
-    effect: "coverflow",
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false,
-    },
-  });
-
-  // HERO SCROLL DOWN
-  const scrollDownBtn = document.querySelector(".scroll__down");
-  scrollDownBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: document.querySelector(".hero__section").clientHeight,
-      behavior: "smooth",
+  if (document.querySelector(".hero__slider")) {
+    // HERO SLIDER
+    var heroSlider = new Swiper(".hero__slider", {
+      loop: true,
+      lazy: true,
+      effect: "coverflow",
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
     });
-  });
+
+    // HERO SCROLL DOWN
+    const scrollDownBtn = document.querySelector(".scroll__down");
+    scrollDownBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: document.querySelector(".hero__section").clientHeight,
+        behavior: "smooth",
+      });
+    });
+  }
 }
 
 // ====== END HERO SECTION ======
@@ -123,7 +125,7 @@ if (document.querySelector(".latest__news-swiper") !== null) {
       prevEl: ".latest__news .prev",
     },
     breakpoints: {
-      991: {
+      0: {
         spaceBetween: 20,
       },
       992: {
@@ -139,6 +141,34 @@ if (document.querySelector(".latest__news-swiper") !== null) {
 }
 
 // ====== END latest__news SECTION ======
+
+// ====== START files__links SECTION ======
+
+if (document.querySelector(".files__links-swiper") !== null) {
+  var latestNewsSwiper = new Swiper(".files__links-swiper", {
+    freeMode: true,
+    navigation: {
+      nextEl: ".files__links .next",
+      prevEl: ".files__links .prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+}
+
+// ====== END files__links SECTION ======
 
 // ====== START CARD Collapse ======
 

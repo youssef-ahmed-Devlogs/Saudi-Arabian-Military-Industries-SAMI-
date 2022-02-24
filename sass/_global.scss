@@ -98,6 +98,11 @@ ul {
     font-weight: 500;
     margin-bottom: 14px;
     display: block;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   }
 
   img {
@@ -110,6 +115,11 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: 25px;
+
+    @media (max-width: 767px) {
+      margin-top: 15px;
+      font-size: 14px;
+    }
   }
 
   .text {
@@ -117,6 +127,10 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 
   .links {
@@ -127,6 +141,7 @@ ul {
 
     @media (max-width: 767px) {
       padding-right: 50px;
+      margin-top: 20px;
     }
 
     .cat {
@@ -141,6 +156,64 @@ ul {
 
     .read__more {
       font-weight: bold;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.files__links__card {
+  background-color: $SAMI_WHITE;
+  padding: 40px 20px 20px;
+
+  @media (max-width: 767px) {
+    padding: 20px 15px 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    color: $SAMI_BLUE;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  .text {
+    font-size: 15px;
+    color: $SAMI_BLUELIGHT;
+    margin: 15px 0 30px;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+      margin: 10px 0 20px;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .download__link {
+      padding: 8px 20px !important;
+
+      @media (max-width: 767px) {
+        padding: 5px 14px !important;
+      }
+    }
+
+    .file_info {
+      display: flex;
+      flex-direction: column;
+      color: $SAMI_BLUELIGHT;
+      align-items: flex-end;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -493,7 +566,7 @@ ul {
   gap: 20px 30px;
 
   @media (max-width: 767px) {
-    gap: 10px;
+    gap: 15px;
     justify-content: space-between;
   }
 

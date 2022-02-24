@@ -234,3 +234,32 @@ footer
   margin-left: initial;
   margin-right: auto;
 }
+
+.slider__controls {
+  flex-direction: row-reverse !important;
+}
+
+.mediaCenter__page .slider {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.mediaCenter__page .slider::after {
+  right: initial;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 66, 79, 0.8) 10%,
+    rgba(32, 66, 79, 0.01) 100%
+  );
+}
+
+.article__page .content .breadcrump .link:not(:last-child):after {
+  right: initial;
+  left: -13px;
+}
+
+.article__page .content .article__info > li .value .icon::after {
+  right: initial;
+  left: 25px;
+}
